@@ -1,0 +1,243 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.comment, .newCommentInput, .reply, .replyInput {
+  background-color: white;
+  width: 650px; 
+  margin: 20px auto; 
+  margin-top: 0;
+  padding: .9rem;
+  border-radius: .5rem;
+  display: flex;
+  position: relative;
+}
+
+.comments-container {
+  position: relative;
+  z-index: 1;
+}
+
+.reply {
+  width: 550px;
+  margin-left: 3.5rem;
+}
+
+.replies {
+  position: relative;
+  border-left: 2px solid rgb(220, 220, 220);
+  width: 600px;
+  margin: 20px auto;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  color: hsl(240, 1%, 67%);
+}
+
+.context {
+  margin: 0;
+}
+
+.userName, .popupModal .title {
+  color: black;
+  font-weight: 600;
+}
+
+.bx-reply {
+  color: hsl(238, 40%, 52%);
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  background-color: hsl(228, 33%, 97%);
+  padding: .5rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right .top-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.right .top-right {
+  position: absolute;
+  right: 5%;
+  display: flex;
+  gap: 0.5rem; 
+  align-items: center; 
+}
+
+.plusScore, .minusScore {
+  border: none;
+  background-color: hsl(228, 33%, 97%);
+  cursor: pointer;
+}
+
+.scoreText {
+  color: hsl(238, 40%, 52%);
+  font-weight: 600;
+}
+
+img {
+  height: 32px;
+}
+
+.newCommentInput, .replyInput {
+  justify-content: space-between;
+}
+
+.newCommentInput button, .replyInput button {
+  background-color: hsl(238, 40%, 52%);
+  color: white;
+  padding: 1rem;
+  height: fit-content;
+  border-radius: .5rem;
+  width: 90px;
+}
+
+.newCommentInput textarea, .replyInput textarea {
+  border: 1px solid hsl(240, 2%, 82%);
+  border-radius: .5rem;
+  padding: .5rem;
+}
+
+.editBTN, .deleteBTN, .saveBTN, .cancelBTN {
+  border: 0;
+  background-color: white;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.editBTN, .saveBTN {
+  color: hsl(238, 40%, 52%);
+}
+
+.deleteBTN, .cancelBTN {
+  color: red;
+}
+
+.modalContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.popupModal {
+  background-color: white;
+  padding: 1rem;
+  z-index: 2;
+  border: 1px solid rgb(194, 192, 192);
+  box-shadow: -1px 1px 15px -1px rgba(0, 0, 0, 0.43);
+}
+
+.modalConfirmBTN, .modalCancelBTN {
+  padding: .4rem;
+  background-color: white;
+  border: 1.9px solid hsl(238, 40%, 52%);
+  cursor: pointer;
+  border-radius: .2rem;
+}
+
+.modalCancelBTN:hover {
+  background-color: rgb(247, 247, 247);
+}
+
+.modalConfirmBTN {
+  background-color: hsl(238, 40%, 52%);
+  color: white;
+  border: none;
+  padding: .5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  border-radius: .2rem;
+}
+
+.modalConfirmBTN:hover {
+  background-color: hsl(238, 37%, 41%);
+}
+
+.replyingTo {
+  color: hsl(238, 40%, 52%);
+}
+
+.bx-reply {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .comment, .newCommentInput, .reply, .replyInput {
+    width: 80vw; 
+  }
+  
+  .reply {
+    width: 74vw; 
+    margin-left: 0;
+  }
+  
+  .replies {
+    width: 79vw; 
+    margin: 0 auto;
+    padding-left: 5vw;
+  }
+  
+  p, .bx-reply, .editBTN, .saveBTN, .deleteBTN, .cancelBTN {
+    font-size: 14px; 
+  }
+
+  .right .top-left {
+    justify-content: space-between;
+  }
+
+  textarea{
+    width: 55vw;
+  }
+
+  .newCommentInput button, .replyInput button{
+    font-size: 14px; 
+    margin-top: .5rem;
+    width: 100%;
+  }
+
+  .newCommentInput, .replyInput{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .top {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .top-left {
+    width: 100%; 
+    margin-top: .7rem;
+  }
+  
+  .top-right {
+    width: 100%;
+    justify-content: flex-end; 
+  }
+}
